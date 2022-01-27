@@ -86,8 +86,8 @@ if __name__ == '__main__':
 
     elif args.mode == 'webnlg':
         # 2017 Challeng Version.
-        TRAIN_FILE = "/u/scr/xlisali/WebNLG/webnlg-dataset/webnlg_challenge_2017/train.json"
-        TEST_FILE = "/u/scr/xlisali/WebNLG/webnlg-dataset/webnlg_challenge_2017/dev.json"
+        TRAIN_FILE = "/workdir/data/webnlg_challenge_2017/train.json"
+        TEST_FILE = "/workdir/data/webnlg_challenge_2017/dev.json"
         folder_name = "webnlg_models/"
 
     elif args.mode == 'writingPrompts':
@@ -152,7 +152,7 @@ if __name__ == '__main__':
         max_target_length = 60
         val_max_target_length = 60
         test_max_target_length = 100
-    
+
         xsum_app = ' --max_source_length {} --max_target_length {} --val_max_target_length {} ' \
                     '--test_max_target_length {} '.format(max_source_length, max_target_length,
                                                          val_max_target_length, test_max_target_length)
@@ -230,7 +230,7 @@ if __name__ == '__main__':
     if args.mode == 'cnn_dm':
         app += cnndm_app
 
-    if args.mode == 'xsum' or args.mode == 'xsum_news' or args.mode == 'xsum_news_sport': 
+    if args.mode == 'xsum' or args.mode == 'xsum_news' or args.mode == 'xsum_news_sport':
         app += xsum_app
 
 
