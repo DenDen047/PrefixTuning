@@ -1117,8 +1117,8 @@ def main():
             print('python gen.py webnlg yes test {} no'.format(checkpoint_path))
             os.system('python gen.py webnlg yes valid {} no'.format(checkpoint_path))
             os.system('python gen.py webnlg yes test {} no'.format(checkpoint_path))
-        
-        
+
+
     elif data_args.task_mode == 'triples':
         del model
         del trainer
